@@ -49,6 +49,9 @@
     <Compile Include="utilitiesPackage\__init__.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="visualPackage\visual.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="dataPackage\" />
@@ -56,6 +59,7 @@
     <Folder Include="dataPackage\MMLU\data\" />
     <Folder Include="dataPackage\MMLU\results\" />
     <Folder Include="mainPackage\" />
+    <Folder Include="visualPackage\" />
     <Folder Include="PDFPackage\" />
     <Folder Include="readingLevelPackage\" />
     <Folder Include="utilitiesPackage\" />
@@ -65,6 +69,7 @@
     <Content Include="dataPackage\MMLU\data\anatomy_test.csv" />
     <Content Include="dataPackage\MMLU\data\astronomy_test.csv" />
     <Content Include="dataPackage\MMLU\data\business_ethics_test.csv" />
+    <Content Include="dataPackage\MMLU\data\car_prices.csv" />
     <Content Include="dataPackage\MMLU\data\clinical_knowledge_test.csv" />
     <Content Include="dataPackage\MMLU\data\college_biology_test.csv" />
     <Content Include="dataPackage\MMLU\data\college_chemistry_test.csv" />

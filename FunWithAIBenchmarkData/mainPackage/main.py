@@ -7,6 +7,24 @@ from utilitiesPackage.utilities import *
 from utilitiesPackage.CSV_Utilities import *
 from PDFPackage.PDFUtilities import *
 
+
+from visualPackage.visual import load_data, preprocess_data, perform_kmeans_clustering, visualize_clusters
+
+def main():
+    filepath = 'C:dataPackage\MMLU\data\car_prices.csv'  # Ensure this points to the correct file path
+    features = ['price', 'mileage']  # Replace with the actual feature names in your dataset
+    
+    df = load_data(filepath)  # Load the data
+    scaled_data = preprocess_data(df, features)  # Preprocess the data
+    clusters, _ = perform_kmeans_clustering(scaled_data, n_clusters=3)  # Perform KMeans clustering
+    df['Cluster'] = clusters  # Add the cluster labels to the DataFrame
+    
+    visualize_clusters(df, features, clusters)  # Visualize the clusters
+
+if __name__ == "__main__":
+    main()
+
+
 if __name__ == "__main__":
 
     CSV_Processor = MMLU_CSV_Processor("dataPackage/MMLU/data/", ["management_test.csv"])
